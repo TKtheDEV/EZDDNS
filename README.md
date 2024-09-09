@@ -1,3 +1,4 @@
+#EZDDNS
 Simple yet versatile IPv6 and IPv4 Cloudflare Dynamic DNS updater for Linux
 ##Installation
 1. Download/Clone the repository and open the directory in Terminal.
@@ -15,4 +16,12 @@ chmod +x ezddns.sh
 5. Run ezddns
 ```bash
 ./ezddns.sh
+```
+If you want to start EZDDNS automatically upon reboot do:
+```bash
+crontab -e
+```
+and add
+```bash
+@reboot  /home/user/startup.sh
 ```
