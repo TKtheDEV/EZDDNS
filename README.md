@@ -7,7 +7,7 @@ git clone https://github.com/TKtheDEV/EZDDNS
 ```
 2. Edit ezddns.conf to suit your usecase
 ```bash
-vi ezddns.sh
+vi ezddns.conf
 ```
 4. Make EZDDNS executable
 ```bash
