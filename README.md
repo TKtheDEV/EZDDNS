@@ -24,6 +24,6 @@ crontab -e
 ```
 and add
 ```bash
-@reboot  /home/user/startup.sh
+@reboot  /path/to/ezddns.sh
 ```
 remember to remove EZDDNS from cron when deleting EZDDNS!
