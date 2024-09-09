@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Source configuration and Cloudflare API functions
 source ezddns.conf
