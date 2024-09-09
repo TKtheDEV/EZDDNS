@@ -17,6 +17,7 @@ chmod +x ezddns.sh
 ```bash
 ./ezddns.sh
 ```
+## Advanced
 If you want to start EZDDNS automatically upon reboot do:
 ```bash
 crontab -e
@@ -25,3 +26,4 @@ and add
 ```bash
 @reboot  /home/user/startup.sh
 ```
+remember to remove EZDDNS from cron when deleting EZDDNS!
