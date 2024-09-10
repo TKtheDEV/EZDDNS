@@ -19,7 +19,7 @@ curl bash
 ## Installation
 1. Download/Clone the repository and open the directory in Terminal.
 ```bash
-git clone https://github.com/TKtheDEV/EZDDNS
+git clone https://github.com/TKtheDEV/EZDDNS && cd EZDDNS
 ```
 2. Edit ezddns.conf to suit your usecase
 ```bash
