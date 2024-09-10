@@ -45,8 +45,8 @@ parse_records() {
 # Main loop to continuously check and update IP addresses
 while true; do
     # Get the current IPv6 address
-    getv6=$(curl -s -6 ifconfig.co)
-    if [[ "${getv6}" == *:*:*:*:*:*:*:* && "${legacy}" != true ]]; then
+    getv6=$(curl -s -6 https://one.one.one.one/cdn-cgi/trace | grep 'ip=' | cut -d'=' -f2)
+    if [[ "${getv6}" == *:*:*:*:*:*:*:* && "${legacyMode}" != true ]]; then
         v6new="${getv6:0:38}"
         prefix="${v6new:0:${prefixCount}}"  # Extract the prefix from the IPv6 address
     else
@@ -55,7 +55,7 @@ while true; do
     fi
 
     # Get the current IPv4 address
-    getv4=$(curl -s -4 ifconfig.co)
+    getv4=$(curl -s -4 https://one.one.one.one/cdn-cgi/trace | grep 'ip=' | cut -d'=' -f2)
     if [[ "${getv4}" == *.*.*.* && "${v4Enabled}" == true ]]; then
         v4new="${getv4}"
     else
@@ -91,3 +91,4 @@ while true; do
     echo "Waiting $((refresh / 60)) minutes until the next update"
     sleep "${refresh}"
 done
+# (C) GitHub\TKtheDEV

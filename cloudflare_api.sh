@@ -108,3 +108,4 @@ cf_update_dns_record() {
         cf_update_record "${fqdn}" "${record_type}" "${record_value}" "${record_id}"
     fi
 }
+# (C) GitHub\TKtheDEV
