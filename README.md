@@ -1,5 +1,15 @@
 # EZDDNS
 Simple yet versatile IPv6 and IPv4 Cloudflare Dynamic DNS updater for Linux
+## Requirements
+1. Depends on curl and bash
+Alpine Linux
+```bash
+apk add curl bash
+```
+Debian based Distros
+```bash
+apt install curl bash
+```
 ## Installation
 1. Download/Clone the repository and open the directory in Terminal.
 ```bash
