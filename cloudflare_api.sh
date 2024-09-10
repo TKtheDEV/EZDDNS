@@ -38,7 +38,7 @@ cf_create_record() {
     api_response=$(curl -s -X POST "https://api.cloudflare.com/client/v4/zones/${zoneId}/dns_records" \
         -H "Authorization: Bearer ${apiToken}" \
         -H "Content-Type: application/json" \
-        --data "{\"type\":\"${record_type}\",\"name\":\"${fqdn}\",\"content\":\"${record_value}\",\"ttl\":60,\"proxied\":false}")
+        --data "{\"type\":\"${record_type}\",\"name\":\"${fqdn}\",\"content\":\"${record_value}\",\"ttl\":${dnsttl},\"proxied\":${proxied}}")
  
     # Check if the curl command was successful
     if [[ $? -ne 0 ]]; then
@@ -69,7 +69,7 @@ cf_update_record() {
     response=$(curl -s -X PUT "https://api.cloudflare.com/client/v4/zones/${zoneId}/dns_records/${record_id}" \
         -H "Authorization: Bearer ${apiToken}" \
         -H "Content-Type: application/json" \
-        --data "{\"type\":\"${record_type}\",\"name\":\"${fqdn}\",\"content\":\"${record_value}\",\"ttl\":60,\"proxied\":false}")
+        --data "{\"type\":\"${record_type}\",\"name\":\"${fqdn}\",\"content\":\"${record_value}\",\"ttl\":${dnsttl},\"proxied\":${proxied}}")
 
     # Check if the curl command was successful
     if [[ $? -ne 0 ]]; then
