@@ -11,7 +11,7 @@ Debian based Distros
 ```bash
 apt install curl bash
 ```
-Everyone else knows how to use a package manager :)
+Everyone else knows how to use their specific package manager :)
 ```bash
 curl bash
 ```
