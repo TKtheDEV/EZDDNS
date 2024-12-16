@@ -34,4 +34,4 @@ chmod +x ezddns.sh
 ./ezddns.sh
 ```
 ## Start on boot
-If you know how to send a PR please
+Feel free to code it and send a PR
